@@ -1,0 +1,62 @@
+{
+	"name": "Property",
+	"crud": [
+		{
+			"name": "property",
+			"unique": ["url"],
+			"update": {
+				"keys": ["name", "description", "data"]
+			},
+			"delete": [""]
+		},
+		{
+			"name": "propertyrecord",
+			"unique": ["url"],
+			"update": {
+				"keys": ["name", "description", "data"]
+			},
+			"delete": [""]
+		},
+		{
+			"name": "propertymaterial",
+			"unique": ["url"],
+			"update": {
+				"keys": ["name", "description", "data"]
+			},
+			"delete": [""]
+		},
+		{
+			"name": "propertyprovider",
+			"unique": ["url"],
+			"update": {
+				"keys": ["name", "description", "data"]
+			},
+			"delete": [""]
+		},
+		{
+			"name": "propertyservice",
+			"unique": ["url"],
+			"update": {
+				"keys": ["name", "description", "data"]
+			},
+			"delete": [""]
+		},
+		{
+			"name": "propertyworker",
+			"unique": ["url"],
+			"update": {
+				"keys": ["name", "description", "data"]
+			},
+			"delete": [""]
+		},
+		{
+			"name": "propertytrade",
+			"unique": ["url"],
+			"update": {
+				"keys": ["name", "description", "data"]
+			},
+			"delete": [""]
+		}
+	],
+	"dependencies": {}
+}

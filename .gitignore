@@ -1,0 +1,15 @@
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*node_modules
+*bower_components
+*.idea
+*.git
+*server.json
+*package-lock.json
+*cordova
+*uuid*

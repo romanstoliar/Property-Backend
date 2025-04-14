@@ -1,0 +1,30 @@
+{
+	"name": "Web Art Work",
+	"license": "MIT",
+	"prefix": "property",
+	"port": 8080,
+	"session": true,
+	"mongo": {
+		"host": "127.0.0.1",
+		"port": 27017,
+		"db": "property"
+	},
+	"modules": {
+		"template": "waw",
+		"core": "waw",
+		"form": "waw",
+		"sem": "waw"
+	},
+	"dependencies": {
+		"mongoose": "*"
+	},
+	"user": {
+		"is": {
+			"admin": "ceo@webart.work"
+		}
+	},
+	"ssls": [],
+	"telegram": {
+		"waw": ""
+	}
+}

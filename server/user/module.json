@@ -1,0 +1,43 @@
+{
+	"priority": 800,
+	"name": "User",
+	"crud": [
+		{
+			"name": "user",
+			"create": ["admin"],
+			"update": [
+				{
+					"keys": [
+						"name",
+						"phone",
+						"bio",
+						"name",
+						"thumb",
+						"upwork_skills",
+						"upwork_keywords",
+						"upwork_hours",
+						"telegram_chat_id",
+						"data",
+						"languages",
+						"skills",
+						"tools",
+						"projects"
+					]
+				},
+				{
+					"keys": ["name", "data", "is"],
+					"name": "admin"
+				}
+			],
+			"fetch": ["", "me"],
+			"delete": ["admin"]
+		}
+	],
+	"dependencies": {
+		"bcrypt-nodejs": "*",
+		"nodemailer": "*",
+		"cors": "*",
+		"njwt": "*",
+		"uuid": "*"
+	}
+}
