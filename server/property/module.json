@@ -5,7 +5,26 @@
 			"name": "property",
 			"unique": ["url"],
 			"update": {
-				"keys": ["name", "description", "data"]
+				"keys": [
+					"name",
+					"description",
+					"region",
+					"city",
+					"address",
+					"type",
+					"buildingtype",
+					"area",
+					"rooms",
+					"floor",
+					"renovation",
+					"appliances",
+					"utilities",
+					"nearby",
+					"price",
+					"status",
+					"photo",
+					"data"
+				  ]
 			},
 			"delete": [""]
 		},
@@ -13,7 +32,7 @@
 			"name": "propertyrecord",
 			"unique": ["url"],
 			"update": {
-				"keys": ["name", "description", "data"]
+				"keys": ["name", "description", "date", "property_id", "type", "cost", "status", "duration", "files", "createdAt", "worker_id" ]
 			},
 			"delete": [""]
 		},
@@ -45,7 +64,7 @@
 			"name": "propertyworker",
 			"unique": ["url"],
 			"update": {
-				"keys": ["name", "description", "data"]
+				"keys": ["name", "position", "region", "city", "experience","phone_number", "email", "task", "status"]
 			},
 			"delete": [""]
 		},

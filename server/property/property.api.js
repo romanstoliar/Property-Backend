@@ -1,33 +1,55 @@
 module.exports = async (waw) => {
-	const crudConfig = {
+	const baseCrud = {
+		get: {
+			query: (req) => ({
+				moderators: req.user._id,
+			}),
+			sort: () => ({ _id: -1 }),
+		},
+	};
+
+	const propertyrecordCrud = {
 		get: {
 			query: (req) => {
 				const query = {
 					moderators: req.user._id,
 				};
 
-				if (req.query.provider) {
-					query.provider = req.query.provider;
+				if (req.query.property_id) {
+					query.property_id = req.query.property_id;
 				}
 
-				if (req.query.property) {
-					query.property = req.query.property;
+				if (req.query.type) {
+					query.type = req.query.type;
+				}
+
+				// Фільтрація за createdAt (дата створення)
+				if (req.query.dateStart || req.query.dateEnd) {
+					query.createdAt = {};
+					if (req.query.dateStart) {
+						query.createdAt.$gte = new Date(req.query.dateStart);
+					}
+					if (req.query.dateEnd) {
+						query.createdAt.$lte = new Date(req.query.dateEnd);
+					}
 				}
 
 				return query;
 			},
-			sort: () => {
-				return {
-					_id: "-1",
-				};
+
+			sort: (req) => {
+				if (req.query.sort === 'asc') return { createdAt: 1 };
+				return { createdAt: -1 }; // За замовчуванням — новіші перші
 			},
 		},
 	};
-	waw.crud("property", crudConfig);
-	waw.crud("propertyrecord", crudConfig);
-	waw.crud("propertymaterial", crudConfig);
-	waw.crud("propertyprovider", crudConfig);
-	waw.crud("propertyservice", crudConfig);
-	waw.crud("propertyworker", crudConfig);
-	waw.crud("propertytrade", crudConfig);
+
+	// Реєстрація моделей з відповідною конфігурацією
+	waw.crud("property", baseCrud);
+	waw.crud("propertyrecord", propertyrecordCrud);
+	waw.crud("propertymaterial", baseCrud);
+	waw.crud("propertyprovider", baseCrud);
+	waw.crud("propertyservice", baseCrud);
+	waw.crud("propertyworker", baseCrud);
+	waw.crud("propertytrade", baseCrud);
 };
