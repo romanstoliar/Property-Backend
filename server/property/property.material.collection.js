@@ -3,6 +3,7 @@ module.exports = async function (waw) {
 		name: String,
 		description: String,
 		url: { type: String, sparse: true, trim: true, unique: true },
+		thumb: String,
 		data: {},
 		author: {
 			type: waw.mongoose.Schema.Types.ObjectId,
@@ -29,6 +30,8 @@ module.exports = async function (waw) {
 		this.data = obj.data;
 
 		this.url = obj.url;
+
+		this.thumb=obj.thumb;
 	};
 	return (waw.Propertymaterial = waw.mongoose.model("Propertymaterial", Schema));
 };

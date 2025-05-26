@@ -22,7 +22,7 @@
 					"nearby",
 					"price",
 					"status",
-					"photo",
+					"thumb",
 					"data"
 				  ]
 			},
@@ -32,7 +32,19 @@
 			"name": "propertyrecord",
 			"unique": ["url"],
 			"update": {
-				"keys": ["name", "description", "date", "property_id", "type", "cost", "status", "duration", "files", "createdAt", "worker_id" ]
+				"keys": [
+				"name", 
+				"description", 
+				"date", 
+				"property_id",
+				"type", 
+				"cost",
+				"status", 
+				"duration", 
+				"files", 
+				"createdAt", 
+				"worker_id" 
+			]
 			},
 			"delete": [""]
 		},
@@ -40,7 +52,13 @@
 			"name": "propertymaterial",
 			"unique": ["url"],
 			"update": {
-				"keys": ["name", "description", "data"]
+				"keys": 
+				[
+					"name", 
+					"description", 
+					"data", 
+					"thumb"
+				]
 			},
 			"delete": [""]
 		},
@@ -48,7 +66,12 @@
 			"name": "propertyprovider",
 			"unique": ["url"],
 			"update": {
-				"keys": ["name", "description", "data"]
+				"keys": 
+				[
+					"name", 
+					"description", 
+					"data"
+				]
 			},
 			"delete": [""]
 		},
@@ -56,7 +79,12 @@
 			"name": "propertyservice",
 			"unique": ["url"],
 			"update": {
-				"keys": ["name", "description", "data"]
+				"keys": 
+				[
+					"name", 
+					"description", 
+					"data"
+				]
 			},
 			"delete": [""]
 		},
@@ -64,7 +92,19 @@
 			"name": "propertyworker",
 			"unique": ["url"],
 			"update": {
-				"keys": ["name", "position", "region", "city", "experience","phone_number", "email", "task", "status"]
+				"keys": 
+				[
+					"name", 
+					"position", 
+					"region", 
+					"city", 
+					"experience",
+					"phone_number", 
+					"email", 
+					"task", 
+					"status", 
+					"thumb"
+				]
 			},
 			"delete": [""]
 		},
@@ -72,7 +112,12 @@
 			"name": "propertytrade",
 			"unique": ["url"],
 			"update": {
-				"keys": ["name", "description", "data"]
+				"keys": 
+				[
+					"name", 
+					"description", 
+					"data"
+				]
 			},
 			"delete": [""]
 		}

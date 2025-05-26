@@ -33,7 +33,6 @@ module.exports = async function (waw) {
 	Schema.methods.create =function (obj, user, waw) {
 		this.author = user._id;
 		this.moderators = [user._id];
-
 		this.name = obj.name;
 		this.description = obj.description;
 		this.property_id = obj.property_id;

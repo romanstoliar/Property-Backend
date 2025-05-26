@@ -39,7 +39,7 @@ module.exports = async (waw) => {
 
 			sort: (req) => {
 				if (req.query.sort === 'asc') return { createdAt: 1 };
-				return { createdAt: -1 }; // За замовчуванням — новіші перші
+				return { createdAt: -1 }; 
 			},
 		},
 	};

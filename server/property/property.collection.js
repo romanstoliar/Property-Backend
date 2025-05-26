@@ -18,7 +18,7 @@ module.exports = async function (waw) {
 		nearby: String,
 		price: Number,
 		status: String,
-		photo: String,
+		thumb: String,
 
 		data: {},
 	
@@ -57,7 +57,7 @@ module.exports = async function (waw) {
 		this.nearby = obj.nearby;
 		this.price = obj.price;
 		this.status = obj.status;
-		this.photo = obj.photo;
+		this.thumb = obj.thumb;
 		this.data = obj.data;
 		
 	};

@@ -9,6 +9,7 @@ module.exports = async function (waw) {
 		status: String,
 		phone_number: String,
 		email: String,
+		thumb: String,
 		url: { type: String, sparse: true, trim: true, unique: true },
 
 
@@ -29,7 +30,6 @@ module.exports = async function (waw) {
 	Schema.methods.create = function (obj, user, waw) {
 		this.author = user._id;
 		this.moderators = [user._id];
-	
 		this.name = obj.name;
 		this.position = obj.position;
 		this.region = obj.region;
@@ -42,6 +42,7 @@ module.exports = async function (waw) {
 		this.email=obj.email;
 		this.data = obj.data;
 		this.url = obj.url;
+		this.thumb = obj.thumb;
 	};
 	
 	return (waw.Propertyworker = waw.mongoose.model("Propertyworker", Schema));
