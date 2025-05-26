@@ -43,6 +43,25 @@ module.exports = async (waw) => {
 			},
 		},
 	};
+	const propertyworkerCrud = {
+	get: [
+		// приватна (авторизована)
+		{
+			ensure: waw.next,
+			query: (req) => ({
+				moderators: req.user._id,
+			}),
+		},
+		// публічна (без перевірки користувача)
+		{
+			name: "public",
+			ensure: waw.next,
+			query: (req) => ({}), // усі записи
+		},
+	],
+	sort: () => ({ _id: -1 }),
+};
+
 
 	// Реєстрація моделей з відповідною конфігурацією
 	waw.crud("property", baseCrud);
@@ -50,6 +69,6 @@ module.exports = async (waw) => {
 	waw.crud("propertymaterial", baseCrud);
 	waw.crud("propertyprovider", baseCrud);
 	waw.crud("propertyservice", baseCrud);
-	waw.crud("propertyworker", baseCrud);
+	waw.crud("propertyworker", propertyworkerCrud);
 	waw.crud("propertytrade", baseCrud);
 };

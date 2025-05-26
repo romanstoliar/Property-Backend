@@ -91,6 +91,7 @@
 		{
 			"name": "propertyworker",
 			"unique": ["url"],
+			"get": ["", "public"],
 			"update": {
 				"keys": 
 				[
