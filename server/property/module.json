@@ -1,6 +1,6 @@
 {
 	"name": "Property",
-	"repo": "http://138.68.110.222:1546",
+	"repo": "https://github.com/romanstoliar/Property-Backend.git",
 	"crud": [
 		{
 			"name": "property",
