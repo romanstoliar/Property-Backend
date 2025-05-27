@@ -12,6 +12,7 @@ module.exports = async function (waw) {
 			files: [String],
 			worker_id: String,
 			createdAt: Date,
+			thumb: String,
 			url: { type: String, sparse: true, trim: true, unique: true },
 			data: {},
 			author: {
@@ -45,6 +46,7 @@ module.exports = async function (waw) {
 		this.worker_id = obj.worker_id;
 		this.data = obj.data;
 		this.createdAt = obj.createdAt;
+		this.thumb = obj.thumb;
 
 	};
 	

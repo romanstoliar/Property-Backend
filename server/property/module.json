@@ -1,5 +1,6 @@
 {
 	"name": "Property",
+	"repo": "http://138.68.110.222:1546",
 	"crud": [
 		{
 			"name": "property",
@@ -43,7 +44,8 @@
 				"duration", 
 				"files", 
 				"createdAt", 
-				"worker_id" 
+				"worker_id",
+				"thumb"
 			]
 			},
 			"delete": [""]
