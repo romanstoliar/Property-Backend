@@ -11,17 +11,8 @@
 						"name",
 						"phone",
 						"bio",
-						"name",
 						"thumb",
-						"upwork_skills",
-						"upwork_keywords",
-						"upwork_hours",
-						"telegram_chat_id",
-						"data",
-						"languages",
-						"skills",
-						"tools",
-						"projects"
+						"data"
 					]
 				},
 				{

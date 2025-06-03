@@ -18,6 +18,14 @@
 	"dependencies": {
 		"mongoose": "*"
 	},
+	"ngx": {
+		"apps": [
+			{
+				"path": "/client",
+				"dist": "/client/dist/app/browser"
+			}
+		]
+	},
 	"user": {
 		"is": {
 			"admin": "ceo@webart.work"

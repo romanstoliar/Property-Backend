@@ -11,7 +11,7 @@ module.exports = function (waw) {
 			thumb: { type: String, default: "/assets/default.png" },
 			email: { type: String, unique: true, sparse: true, trim: true },
 			reg_email: { type: String, unique: true, sparse: true, trim: true },
-			tools: [
+		/*	tools: [
 				{
 					type: waw.mongoose.Schema.Types.ObjectId,
 					sparse: true,
@@ -31,7 +31,7 @@ module.exports = function (waw) {
 					sparse: true,
 					ref: "Skill",
 				},
-			],
+			],*/
 			languages: [String],
 			password: String,
 			name: String,
